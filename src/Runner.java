@@ -10,9 +10,13 @@ public class Runner {
             System.out.println("** MENU **");
             System.out.println("Kitap eklemek için 1:");
             System.out.println("Kitap silmek için 2:");
-            System.out.println("Kitapları listelemek için 3:" + "\n");
-            Scanner scanner = new Scanner(System.in);
-            int secim = scanner.nextInt();
+            System.out.println("Kitapları listelemek için 3:");
+            System.out.println("Çıkış yapmak için 0:" + "\n");
+            System.out.print("Seçiminiz: ");
+
+
+            Scanner input = new Scanner(System.in);
+            int secim = input.nextInt();
 
 
             switch (secim) {

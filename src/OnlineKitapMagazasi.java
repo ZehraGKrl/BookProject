@@ -20,6 +20,7 @@ class OnlineKitapMagazasi {
 
         Kitap k=new Kitap(kitap,yazar,yayinYili,fiyati);
         kitapListesi.add(k);
+        System.out.println("Kitap başarıyla eklenmiştir. \n");
 
     }
     //////////////////////////////////////////////////
