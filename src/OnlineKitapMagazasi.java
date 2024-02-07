@@ -35,23 +35,25 @@ class OnlineKitapMagazasi {
         // NOT: Silinecek kitabın listede olup olmadığını kontrol etmeyi unutmayınız.
         // İşlemin sonucunu konsola yazdırınız: "Kitap başarıyla silindi." veya "Belirtilen numarada bir kitap bulunamadı." gibi...
 
+        boolean varMi=false;
 
         for (Kitap o : kitapListesi) {
 
             if (silinecekKitapNumarasi == o.getKitapNumarasi()) {
                 kitapListesi.remove(o);
-                System.out.println("Girilen numaraya sahip kitap silindi.");
+                System.out.println("Girilen numaraya sahip kitap silindi. \n");
                 System.out.println(kitapListesi);
+                varMi=true;
                 break;
-            } else {
-                System.out.println("Belirtilen numarada kitap bulunamadı.");
             }
-
+        }if (!varMi){
+            System.out.println("Belirtilen numarada bir kitap bulunamadı.");
+        }
     }
 
 //////////////////////////////////////////////////
 
-    }
+
 
     public void kitapListele() {
         // TODO: kitapListele() methodunu doldurunuz

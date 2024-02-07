@@ -3,7 +3,7 @@ class Kitap {
 
     //TODO: int kitapNumarasi ve yayinYili; String kitapAdi ve yazarAd; double fiyat fieldlarini olusturun.
     // Oluşan her kitap nesnesinin yegane (unique) bir kitap numarası olmalıdır.
-    private static int nextKitapId =1;
+    private static int nextKitapId =0;
     private int kitapNumarasi;
 
     private String kitapAdi;
@@ -15,7 +15,7 @@ class Kitap {
     ///////////////////////////////////////////////////////////////////////
 
     public Kitap(String kitapAdi, String yazarAd, int yayinYili, double fiyat) {
-        this.kitapNumarasi= nextKitapId++;
+        this.kitapNumarasi= ++nextKitapId;
         this.kitapAdi = kitapAdi;
         this.yazarAd = yazarAd;
         this.yayinYili = yayinYili;
