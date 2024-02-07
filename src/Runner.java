@@ -7,7 +7,7 @@ public class Runner {
         boolean exit = false;
 
         do {
-            System.out.println("** MENU **");
+            System.out.println("*** SEÇİM MENÜSÜ ***");
             System.out.println("Kitap eklemek için 1:");
             System.out.println("Kitap silmek için 2:");
             System.out.println("Kitapları listelemek için 3:");

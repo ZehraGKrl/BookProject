@@ -64,6 +64,6 @@ class Kitap {
                 "Yayın yılı: " + yayinYili + "\n"+
                 "Kitap adı: " + kitapAdi + "\n"+
                 "Yazar adı: " + yazarAd + "\n"+
-                "Fiyatı: " + fiyat +"\n";
+                "Fiyatı: " + fiyat +" " +"\n";
     }
 }
