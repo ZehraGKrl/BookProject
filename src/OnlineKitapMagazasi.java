@@ -4,13 +4,14 @@ import java.util.Scanner;
 class OnlineKitapMagazasi {
     private ArrayList<Kitap> kitapListesi = new ArrayList<>();
     private Scanner input = new Scanner(System.in);
+    private Scanner inputStr = new Scanner(System.in);
 
     public void kitapEkle() {
         System.out.println("Kitap adı giriniz:");
-        String kitap=input.nextLine();
+        String kitap=inputStr.nextLine();
 
         System.out.println("Yazar adı giriniz:");
-        String yazar=input.nextLine();
+        String yazar=inputStr.nextLine();
 
         System.out.println("Yayın yılını giriniz:");
         int yayinYili=input.nextInt();
@@ -39,7 +40,7 @@ class OnlineKitapMagazasi {
 
             if (silinecekKitapNumarasi == o.getKitapNumarasi()) {
                 kitapListesi.remove(o);
-                System.out.println("Girilen kitap numaraya sahip kitap silindi.");
+                System.out.println("Girilen numaraya sahip kitap silindi.");
                 System.out.println(kitapListesi);
                 break;
             } else {

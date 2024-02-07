@@ -15,7 +15,7 @@ class Kitap {
     ///////////////////////////////////////////////////////////////////////
 
     public Kitap(String kitapAdi, String yazarAd, int yayinYili, double fiyat) {
-        this.kitapNumarasi= ++nextKitapId;
+        this.kitapNumarasi= nextKitapId++;
         this.kitapAdi = kitapAdi;
         this.yazarAd = yazarAd;
         this.yayinYili = yayinYili;
@@ -60,11 +60,10 @@ class Kitap {
 
     @Override
     public String toString() {
-        return "**Kitap**" +
-                "Kitap numarası:" + kitapNumarasi +
-                ", Yayın yılı:" + yayinYili +
-                ", Kitap adı:" + kitapAdi + '\'' +
-                ", Yazar adı:" + yazarAd + '\'' +
-                ", Fiyatı:" + fiyat;
+        return "\n"+ "Kitap numarası: " + kitapNumarasi + "\n"+
+                "Yayın yılı: " + yayinYili + "\n"+
+                "Kitap adı: " + kitapAdi + "\n"+
+                "Yazar adı: " + yazarAd + "\n"+
+                "Fiyatı: " + fiyat +"\n";
     }
 }
