@@ -41,13 +41,13 @@ class OnlineKitapMagazasi {
 
             if (silinecekKitapNumarasi == o.getKitapNumarasi()) {
                 kitapListesi.remove(o);
-                System.out.println("Girilen numaraya sahip kitap silindi. \n");
+                System.out.println("Girilen numaraya sahip kitap silindi.\n");
                 System.out.println(kitapListesi);
                 varMi=true;
                 break;
             }
         }if (!varMi){
-            System.out.println("Belirtilen numarada bir kitap bulunamadı.");
+            System.out.println("Belirtilen numarada bir kitap bulunamadı.\n");
         }
     }
 
