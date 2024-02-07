@@ -1,22 +1,32 @@
+import java.util.ArrayList;
+import java.util.Scanner;
 
 class OnlineKitapMagazasi {
     private ArrayList<Kitap> kitapListesi = new ArrayList<>();
-    private Scanner scanner = new Scanner(System.in);
+    private Scanner input = new Scanner(System.in);
 
     public void kitapEkle() {
-        // TODO: kitapEkle() methodunu doldurunuz
-        // Kullanıcıdan Kitap Adı, Yazar Adı, Yayın Yılı (int) ve Fiyat (double) bilgisini alarak,
-        // itapListesine ekleyen metodu yazınız.
-        // NOT: Kullanıcıdan aldığınız bilgilerle bir kitap nesnesi oluşturmayı unutmayınız.
+        System.out.println("Kitap adı giriniz:");
+        String kitap=input.nextLine();
 
+        System.out.println("Yazar adı giriniz:");
+        String yazar=input.nextLine();
 
+        System.out.println("Yayın yılını giriniz:");
+        int yayinYili=input.nextInt();
 
+        System.out.println("Kitabın fiyatını giriniz:");
+        double fiyati=input.nextDouble();
+
+        Kitap k=new Kitap(kitap,yazar,yayinYili,fiyati);
+        kitapListesi.add(k);
 
     }
     //////////////////////////////////////////////////
     public void kitapSil() {
 
         System.out.print("Silmek istediğiniz kitabın numarasını girin: ");
+        int silinecekKitapNumarasi = input.nextInt();
 
         // TODO: kitapSil() methodunu doldurunuz
         // Kullanıcıdan unique (yegane) kitap numarasını alarak, kitap listesinden çıkaran metodu yazınız.
@@ -24,17 +34,32 @@ class OnlineKitapMagazasi {
         // İşlemin sonucunu konsola yazdırınız: "Kitap başarıyla silindi." veya "Belirtilen numarada bir kitap bulunamadı." gibi...
 
 
+        for (Kitap o : kitapListesi) {
 
+            if (silinecekKitapNumarasi == o.getKitapNumarasi()) {
+                kitapListesi.remove(o);
+                System.out.println("Girilen kitap numaraya sahip kitap silindi.");
+                System.out.println(kitapListesi);
+                break;
+            } else {
+                System.out.println("Belirtilen numarada kitap bulunamadı.");
+            }
 
     }
+
 //////////////////////////////////////////////////
+
+    }
+
     public void kitapListele() {
         // TODO: kitapListele() methodunu doldurunuz
         // Lİstede bulunan kitapları listeleyen metodu yazınız...
         // Listede kitap yoksa konsola "Henüz kitap eklenmemiş." veya "Listede kitap yok" mesajı yazdırınız.
+        if (kitapListesi.isEmpty()){
+            System.out.println("Henüz kitap eklenmemiş.");
+        } else{
+            System.out.println(kitapListesi);
 
-
-
-
+        }
     }
 }
